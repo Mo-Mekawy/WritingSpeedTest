@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writing Speed Test</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main stylesheet and script -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main id="game">
+      <h1 id="main-title">Typing Speed Test Game</h1>
+      <div class="container">
+        <p class="message">
+          You are playing on
+          <span data-game-level></span> level &amp; you have
+          <span data-seconds-left></span> seconds to type the word
+        </p>
+
+        <div id="set-game">
+          <select data-levels-select id="levels-select">
+            <option value="Easy">Easy</option>
+            <option value="Normal">Normal</option>
+            <option value="Hard">Hard</option>
+          </select>
+          <button class="start-btn" data-btn="startGame">Start playing</button>
+        </div>
+
+        <p class="word" data-word-to-type></p>
+        <input
+          type="text"
+          placeholder="type here"
+          class="text-field"
+          data-typing-field
+        />
+        <p class="next-words" data-next-words></p>
+
+        <div class="control">
+          <p>Time left: <span data-time-left></span> seconds</p>
+          <p>
+            Score: <span data-current-score></span> From
+            <span class="score-goal" data-score-goal></span>
+          </p>
+        </div>
+
+        <p class="finish" data-finish-message></p>
+      </div>
+    </main>
+  </body>
+</html>
